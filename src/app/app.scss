@@ -47,7 +47,7 @@ a.active {
 .mobile-menu {
   display: none;
   position: fixed; /* ostaje iznad sadržaja */
-  top: 37px; /* odmah ispod header-a, prilagodi visini header-a */
+  top: 36px; /* odmah ispod header-a, prilagodi visini header-a */
   left: 0;
   width: 100vw; /* pun ekran po širini */
   background-color: rgba(0, 0, 0, 0.50); /* poluprovidna crna */

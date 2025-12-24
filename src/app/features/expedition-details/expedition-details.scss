@@ -51,13 +51,13 @@ iframe {
 
 .from-left {
   opacity: 0;
-  transform: translateX(-220px);
+  transform: translateX(-120px);
   transition: all 0.7s ease-out;
 }
 
 .from-right {
   opacity: 0;
-  transform: translateX(220px);
+  transform: translateX(120px);
   transition: all 0.7s ease-out;
 }
 
@@ -113,7 +113,7 @@ iframe {
     }
 
     .iframe-style {
-    width: 100%;
+    width: 90%;
 }
 
 .img-rounded-all-sides {
