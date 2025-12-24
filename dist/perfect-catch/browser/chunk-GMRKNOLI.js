@@ -1,0 +1,1 @@
+import{O as a,j as r}from"./chunk-LASU4HDU.js";var s=class t{toastSubject=new r;toast$=this.toastSubject.asObservable();show(e,o="info",c=1e3){this.toastSubject.next({message:e,type:o,delay:c})}static \u0275fac=function(o){return new(o||t)};static \u0275prov=a({token:t,factory:t.\u0275fac,providedIn:"root"})};export{s as a};
