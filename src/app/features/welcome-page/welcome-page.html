@@ -1,0 +1,46 @@
+<div class="welcome-page-container mb-5">
+  <div class="carousel-wrapper">
+    <app-carousel
+      class="carousel-style" 
+      [images]="imagesList">
+    </app-carousel>
+  </div>
+  <div class="carousel-text-title">
+    <!-- <span>SVAKI ULOV IMA SVOJU PRICU TBOJ SAVRSENI ULOV POCINJE OVDE</span> -->
+    <span>TVOJ SAVRSENI ULOV POCINJE OVDE</span>
+  </div>
+  <div class="carousel-text mt-3">
+    <h4 class="mt-3 welcome-text">Ovo nije samo o ribi. Ovo je o trenucima mira, izazovima prirode i radosti deljenja priče.</h4>
+    <h4 class="welcome-text">Pridruži se mojoj avanturi – na vodi, u rečima i kroz opremu koja pravi razliku.</h4>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row g-4">
+
+        <div class="col-md-4" (click)="onFacebookCard()">
+            <div class="social-card facebook">
+                <h3>Facebook</h3>
+                <!-- <img class="pc-logo" src="logo.png"> -->
+                <p>Zapratite nas na Facebooku</p>
+            </div>
+        </div>
+
+        <div class="col-md-4" (click)="onInstagramCard()">
+            <div class="social-card instagram">
+                <h3>Instagram</h3>
+                <!-- <img class="pc-logo" src="logo.png"> -->
+                <p>Pratite nas na Instagramu</p>
+            </div>
+        </div>
+
+        <div class="col-md-4" (click)="onYouTubeCard()">
+            <div class="social-card youtube">
+                <h3>YouTube</h3>
+                <!-- <img class="pc-logo" src="logo.png"> -->
+                <p>Pogledajte naše videe</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

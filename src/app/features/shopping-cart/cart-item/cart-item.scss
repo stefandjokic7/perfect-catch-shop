@@ -1,0 +1,21 @@
+@use './../../../styles/variables' as *;
+
+.cart-item {
+    font-family: $app-font;
+    background-color: white;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 15px;
+}
+
+.item-counter {
+    width: 60px;
+}
+
+.card-body {
+    min-width: 200px;
+}
+
+.img-cart {
+    width: 700px;
+
+}

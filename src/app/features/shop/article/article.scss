@@ -1,0 +1,56 @@
+@use './../../../styles/variables' as *; 
+
+.article-container {
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    font-family: $app-font;
+}
+
+.card-img-top {
+  max-width: 386px;
+  max-height: 290px;
+
+  min-width: 286px;
+  min-height: 180px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image-wrapper {
+  position: relative; /* važno */
+  width: 100%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.rating {
+  font-size: 1.2rem;
+}
+
+.star {
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffc107; /* Bootstrap žuta */
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+

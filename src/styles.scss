@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: 'BernoruBlackUltraExpanded';
+  src: url('./assets/fonts/bernoru-blackultraexpanded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

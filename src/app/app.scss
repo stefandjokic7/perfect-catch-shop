@@ -1,0 +1,117 @@
+@use './styles/colors' as *;
+@use './styles/variables' as *;
+
+.header {
+  background: $header-color;
+}
+
+.logo-title {
+  font-size: 16px;
+  font-weight: 200;
+  font-family: $app-font;
+}
+
+
+.header-logo {
+  width: 35px;
+}
+
+.nav-item {
+  background-color: #2c2c2c;
+  margin-left: 4px;
+  border-top-left-radius : 8px;
+  border-top-right-radius : 8px;
+  font-family: $app-font;;
+  opacity: 0.9;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+a.active {
+  background-color: #75706f !important;
+  border: unset;
+  color: #75706f;
+}
+
+.social-icons a {
+  color: #fff;              /* belo na crnom */
+  font-size: 1.2rem;
+  margin-left: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Mobile dropdown */
+.mobile-menu {
+  display: none;
+  position: fixed; /* ostaje iznad sadržaja */
+  top: 45px; /* odmah ispod header-a, prilagodi visini header-a */
+  left: 0;
+  width: 100vw; /* pun ekran po širini */
+  background-color: rgba(0, 0, 0, 0.50); /* poluprovidna crna */
+  list-style: none;
+  padding: 10px 0; /* mali padding sa vrha i dna */
+  flex-direction: column;
+  gap: 0; /* bez previše razmaka */
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-bottom-left-radius: 8px; /* blago zaobljenje */
+  border-bottom-right-radius: 8px;
+}
+
+/* Aktivni dropdown */
+.mobile-menu.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Linkovi */
+.mobile-menu li a {
+  text-decoration: none;
+  color: #fff; /* beli tekst */
+  font-size: 18px;
+  padding: 15px 20px;
+  display: block;
+  transition: background 0.2s;
+}
+
+.mobile-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* blago svetliji hover */
+}
+
+/* Hamburger dugme */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff; /* beli hamburger */
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+.menu-toggle.active .bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Responsivno */
+@media (max-width: 1260px) {
+  .desktop-menu { display: none; }
+  .menu-toggle { display: flex; }
+
+  .logo-title {
+    font-size: 8px;
+  }
+}
+
+
+

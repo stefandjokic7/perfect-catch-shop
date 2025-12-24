@@ -1,0 +1,90 @@
+@use './../../styles/colors' as *;
+@use './../../styles/variables' as *;
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.welcome-page-container {
+  font-family: $app-font;
+  background-color: #e9e9e9;
+}
+
+.carousel-style {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-text-title {
+
+  font-family: 'BernoruBlackUltraExpanded', sans-serif;
+  position: absolute;
+  bottom: 130px;
+  /* udaljenost od dna */
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  z-index: 10;
+  font-size: 23px;
+}
+
+
+.carousel-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px !important;
+}
+
+.pc-logo {
+  width: 60px;
+  border-radius: 100px;
+}
+
+.pc-logo-background {
+  width: 60px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.social-card {
+  cursor: pointer;
+}
+
+.social-card {
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 20px;
+}
+
+.social-card:hover {
+  transform: scale(1.02);
+  /* blago povećanje */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+@media (max-width: 1260px) {
+  .carousel-text-title {
+    position: relative;
+    font-family: 'BernoruBlackUltraExpanded', sans-serif;
+    bottom: 30px;
+    color: white;
+    text-align: center;
+    // padding: 10px 20px;
+    z-index: 10;
+    font-size: 10px;
+  }
+
+  .welcome-text {
+    position: relative;
+    bottom: 50px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* tekst sa leve i desne strane */
+    width: 100%;
+    padding: 0 10px; /* opcionalno, malo prostora od ivica */
+  }
+}

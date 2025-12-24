@@ -1,0 +1,14 @@
+@use './../../../styles/variables' as *;
+
+.toast-success {
+  font-family: $app-font;
+  font-size: 12px;
+  background-color: rgb(230, 230, 230);
+  border: 3px solid #627d68; /* zeleni border */
+  color: #212529;             /* tamni tekst */
+  border-radius: 10px;
+}
+
+.toast-success .btn-close {
+  filter: invert(30%); /* da dugme bude vidljivo na beloj pozadini */
+}

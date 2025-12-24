@@ -1,0 +1,103 @@
+@use './../../styles/variables' as *;
+
+.expedition-details {
+    font-family: $app-font;
+    background-color: #e9e9e9;
+    padding-top: 50px;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.text-img-card {
+    background-color: white;
+    border-radius: 10px;
+    text-align: justify;
+    width: 95%;
+}
+
+.img-card-left {     /* visina se prilagođava proporcijama */
+    padding-left: unset !important;
+    padding-right: unset !important;
+    img {
+        object-fit:fill ;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+.img-card-right {
+    padding-left: unset !important;
+    padding-right: unset !important;
+    img {
+        object-fit:fill ;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.img-rounded-all-sides {
+    border-radius: 10px;
+}
+
+.from-left {
+  opacity: 0;
+  transform: translateX(-220px);
+  transition: all 0.7s ease-out;
+}
+
+.from-right {
+  opacity: 0;
+  transform: translateX(220px);
+  transition: all 0.7s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.detils-text {
+    color: rgb(115, 115, 115);
+}
+
+.row.d-flex {
+    align-items: stretch; /* sve kolone iste visine */
+}
+
+.img-card-left {
+    padding: 0; /* uklanja marginu */
+}
+
+.img-card-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* slika pokriva celu kolonu */
+}
+
+@media (max-width: 767px) {
+    .img-card-left {     /* visina se prilagođava proporcijama */
+    padding-left: unset !important;
+    padding-right: unset !important;
+    img {
+        object-fit:fill ;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: unset;
+    }
+}
+
+.img-card-right {
+    padding-left: unset !important;
+    padding-right: unset !important;
+    img {
+        object-fit:fill ;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: unset;
+
+    }
+}
+}
+

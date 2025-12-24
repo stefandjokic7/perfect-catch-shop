@@ -1,0 +1,43 @@
+<div class="shop-container w-100 pb-5">
+  <div class="w-100 text-center p-2">
+    <!-- <h2>Perfect Catch shop</h2> -->
+    <label>Svi proizvodu su licno testiranji i korisceni u mojim pecanjima. Video matijal mozete pronaci na mom YouTube
+      kanalu.</label>
+  </div>
+  <div>
+    <div class="container mt-3 mb-5">
+      <div class="row g-3 articles-list">
+        @for( article of articles; track article) {
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="h-100">
+            <div class="card-body">
+              <app-article 
+                [article]="article"
+                (emitOpenSuggestModal)="openSuggestModal($event)">
+              </app-article>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</div>
+
+@if(selectedArticle) {
+
+<app-base-modal
+  [title]="'Moja preporuka stapa i strune'"
+  [show]="isModalOpen"
+  (emitClose)="closeModal()"
+>
+  <app-suggest-modal
+    [items]="generateSuggestedArticles(selectedArticle)!"
+  ></app-suggest-modal>
+  <div class="w-100 d-flex justify-content-center">
+    <button class="btn btn-outline-danger" (click)="closeModal()">Nije mi potrebna dodatna oprema</button>
+  </div>
+</app-base-modal>
+}
+

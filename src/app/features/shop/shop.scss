@@ -1,0 +1,58 @@
+@use './../../styles/variables' as *;
+@use './../../styles/colors' as *;
+
+
+.shop-container {
+  // position: absolute;
+  padding-top: 50px;
+  font-family: $app-font;
+  background-color: rgb(230, 230, 230);
+}
+
+.text-center {
+  background: rgb(115, 115, 115);
+  color: #eaeaea;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* tablet */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.articles-list app-article {
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 20px;
+}
+
+.articles-list app-article:hover {
+  transform: scale(1.02); /* blago povećanje */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+@media (max-width: 1260px) {
+  .shop-container {
+    padding-top: 45px;
+  }
+
+  .text-center {
+    padding: 1%;
+    font-size: 10px
+  }
+}

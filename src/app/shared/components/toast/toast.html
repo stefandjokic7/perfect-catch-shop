@@ -1,0 +1,18 @@
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1200">
+    @for(toast of toasts; track toast) {
+        <div
+        class="toast show align-items-center mb-2"
+        [ngClass]="{
+            'toast-success': toast.type === 'success',
+            'bg-danger text-white': toast.type === 'error',
+            'bg-primary text-white': toast.type === 'info'
+        }">
+    <div class="d-flex">
+        <div class="toast-body">
+            {{ toast.message }}
+        </div>
+        <button class="btn-close me-2 m-auto" (click)="toasts.shift()"></button>
+    </div>
+</div>
+}
+</div>

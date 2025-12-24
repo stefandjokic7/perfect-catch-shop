@@ -1,0 +1,35 @@
+<div class="cart-item d-flex flex-wrap p-3 align-items-center mt-3">
+    <!-- Slika proizvoda -->
+    <div class="col-12 col-sm-3 col-md-2 mb-2 mb-md-0 pe-5">
+        <img [src]="article()?.img" class="img-fluid rounded-start img-cart" alt="Proizvod">
+    </div>
+
+    <!-- Naziv i količina -->
+    <div class="col-12 col-sm-6 col-md-6 mb-2 mb-md-0">
+        <div class="card-body p-2">
+            <h5 class="card-title">{{ article()?.name }}</h5>
+            <p class="card-text mb-1 text-secondary">Cena: {{ article()?.price + ' ' + article()?.valute }}</p>
+            <div class="mb-2 item-counter">
+                <label class="form-label text-secondary">Količina</label>
+                <input type="number" class="form-control" min="1" [(ngModel)]="itemAmount"
+                    (ngModelChange)="updateQuantity($event)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Ukupno -->
+    <div class="col-6 col-sm-3 col-md-2 mb-2 mb-md-0">
+        <div class="card-body p-2">
+            <h5 class="card-title">Ukupno</h5>
+            <p class="card-text mb-1">Cena: {{ totalOneArticlePrice.toString() + ' ' + article()?.valute }}</p>
+        </div>
+    </div>
+
+    <!-- Dugme za uklanjanje -->
+    <div class="col-6 col-sm-3 col-md-2 mb-2 mb-md-0">
+        <button class="btn btn-outline-danger btn-sm w-100"
+            (click)="removeItemFromCart()"> 
+            Izbaci iz korpe ✖ 
+        </button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="d-flex flex-column gap-2 mb-3">
+  @for (article of items; track article) {
+    <div class="d-flex align-items-center p-3 border rounded">
+
+      <!-- SLiKA -->
+      <img
+        [src]="article.img"
+        class="item-img me-3"
+        alt="article image"
+      />
+
+      <!-- TEKST -->
+      <div class="d-flex flex-column flex-grow-1">
+        <label class="fw-semibold">{{ article.name }}</label>
+        <label class="text-secondary">
+          Cena: {{ article.price }} RSD
+        </label>
+      </div>
+
+      <!-- DUGME -->
+      <button class="btn btn-outline-dark align-self-center" (click)="addInCart(article)">
+        Dodaj u korpu
+      </button>
+
+    </div>
+  }
+</div>

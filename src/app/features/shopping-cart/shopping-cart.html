@@ -1,0 +1,36 @@
+<div class="d-flex flex-column align-items-center p-2 shopping-cart-container">
+    <div class="g-3">
+        @for(itemInCart of shopStore.getItemsInCart(); track itemInCart) {
+            <app-cart-item [article]="itemInCart"></app-cart-item>
+        }
+        @if(shopStore.getItemsInCart().length > 0) {
+            <div class="order-button mt-3 align-items-center gap-3">
+                <label>Ukupno: {{ shopStore.getTotalPrice() + ' ' + shopStore.getItemsInCart()[0].valute }} </label>
+                <button 
+                    class="btn btn-dark btn-lg"
+                    (click)="onOrder()"
+                > Poruci 
+                </button>
+            </div>
+        }
+    </div>
+    @if(shopStore.getItemsInCart().length === 0) {
+        <label>Korpa je prazna</label>
+    }
+</div>
+
+
+
+@if(isModalOpen) {
+    <app-base-modal
+        [title]="'Podaci za dostavu'"
+        [show]="isModalOpen"
+        (emitClose)="closeModal()"
+        (emitConfirm)="confirmModal($event)"
+    >
+    {{ isModalOpen }}
+    <app-user-info-modal
+        (emitOnConfirm)="onConfimUserInfo()"
+    ></app-user-info-modal>
+</app-base-modal>
+}

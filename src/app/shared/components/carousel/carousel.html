@@ -1,0 +1,11 @@
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="3000">
+  <!-- ✅ Carousel slike -->
+  <div class="carousel-inner">
+    @for(image of images(); track image; let i = $index) {
+    <div class="carousel-item {{ i === 0 ? 'active' : '' }}">
+      <img [src]="image" class="d-block w-100" alt="img">
+    </div>
+    }
+  </div>
+</div>
+
