@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Card } from '../../shared/components/card/card';
 import { expeditionCards } from '../../shared/constants/expeditions.constants';
 import { Router } from '@angular/router';
@@ -9,8 +9,12 @@ import { Router } from '@angular/router';
   styleUrl: './expeditions.scss',
   imports: [Card]
 })
-export class Expeditions {
+export class Expeditions implements OnInit {
   private router = inject(Router);
+
+    ngOnInit() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   expeditionCards = expeditionCards;
 

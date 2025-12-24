@@ -9,5 +9,12 @@
 
 .card-text {
     color: rgb(115, 115, 115);
+    text-align: justify;
+}
+
+@media (max-width: 1260px) {
+    .card-text {
+        font-size: 12px;
+    }
 }
 

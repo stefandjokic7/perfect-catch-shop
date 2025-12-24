@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { LeftSlideAnimation } from "../../shared/directives/left-slide-animation";
 import { BaseModal } from '../../shared/components/base-modal/base-modal';
 import { SuggestModal } from '../shop/article/suggest-modal/suggest-modal';
@@ -12,9 +12,13 @@ import { pikeFishingExpedition, pikeFishingExpeditionLures } from '../../shared/
   templateUrl: './expedition-details.html',
   styleUrl: './expedition-details.scss',
 })
-export class ExpeditionDetails {
+export class ExpeditionDetails implements OnInit {
   isModalOpen = false;
   suggestedArticles!: Article[];
+
+  ngOnInit() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   closeModal() {
     this.isModalOpen = false;

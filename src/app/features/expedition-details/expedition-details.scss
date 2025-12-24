@@ -6,8 +6,16 @@
     padding-top: 50px;
 }
 
+.title {
+    color: rgb(134, 134, 134);
+}
+
 iframe {
     border-radius: 10px;
+}
+
+.iframe-style {
+    width: 65%;
 }
 
 .text-img-card {
@@ -98,6 +106,18 @@ iframe {
         border-top-right-radius: unset;
 
     }
+}
+
+    .detils-text {
+        font-size: 12px;
+    }
+
+    .iframe-style {
+    width: 100%;
+}
+
+.img-rounded-all-sides {
+    margin-top: 10px;
 }
 }
 

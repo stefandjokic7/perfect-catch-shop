@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { Toast } from './shared/components/toast/toast';
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ import { Toast } from './shared/components/toast/toast';
 })
 export class App {
   protected readonly title = signal('perfect-catch');
+  private router = inject(Router);
   activeLink = '';
 
   menuActive: boolean = false;
@@ -21,5 +22,9 @@ export class App {
 
   toggleMenu() {
     this.menuActive = !this.menuActive;
+  }
+
+  onLogo() {
+    this.router.navigateByUrl('/welcome');
   }
 }
