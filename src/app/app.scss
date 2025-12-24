@@ -114,7 +114,7 @@ a.active {
   white-space: nowrap;         /* sprečava lomljenje reči */
   overflow: hidden;            /* sakriva višak */
   text-overflow: ellipsis;     /* opcionalno, dodaje "..." ako ne stane */
-  font-size: clamp(8px, 4vw, 16px); /* automatsko smanjivanje fonta */
+  font-size: clamp(6px, 2vw, 16px); /* automatsko smanjivanje fonta */
 }
 
   .header-logo {
