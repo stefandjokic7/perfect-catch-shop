@@ -16,7 +16,7 @@ export class WelcomePage {
   imagesMobile = [
     'images/welcome-imgs/drina_v.png',
     'images/welcome-imgs/lim_v.png',
-    'images/welcome-imgs/pike_v.jpg',
+    'images/welcome-imgs/pike_v.png',
     'images/welcome-imgs/surko_v.png',
   ];
 

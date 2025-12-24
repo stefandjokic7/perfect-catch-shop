@@ -109,8 +109,13 @@ a.active {
   .menu-toggle { display: flex; }
 
   .logo-title {
-    font-size: 10px;
-  }
+  display: inline-block;       /* da text prati dimenziju diva */
+  width: 100%;                 /* zauzima punu širinu diva */
+  white-space: nowrap;         /* sprečava lomljenje reči */
+  overflow: hidden;            /* sakriva višak */
+  text-overflow: ellipsis;     /* opcionalno, dodaje "..." ako ne stane */
+  font-size: clamp(8px, 4vw, 16px); /* automatsko smanjivanje fonta */
+}
 
   .header-logo {
     width: 25px;
