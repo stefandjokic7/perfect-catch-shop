@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Carousel } from '../../shared/components/carousel/carousel';
 
 @Component({
@@ -10,7 +10,34 @@ import { Carousel } from '../../shared/components/carousel/carousel';
 })
 export class WelcomePage {
   // imagesList: string[] = ['surko.png', 'drina.png', 'night.png', 'pike.png'];
-  imagesList: string[] = ['drina.png', 'surko.png', 'grdica.png'];
+
+  imagesDesktop = ['drina.png', 'surko.png', 'grdica.png']
+
+  imagesMobile = [
+    'images/welcome-imgs/drina_v.png',
+    'images/welcome-imgs/lim_v.png',
+    'images/welcome-imgs/pike_v.jpg',
+    'images/welcome-imgs/surko_v.png',
+  ];
+
+  imagesList: string[] = [];
+
+  ngOnInit() {
+    this.updateImages(window.innerWidth);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.updateImages(event.target.innerWidth);
+  }
+
+  updateImages(width: number) {
+    if (width <= 600) {  // ili neka druga vrednost za telefon
+      this.imagesList = this.imagesMobile;
+    } else {
+      this.imagesList = this.imagesDesktop;
+    }
+  }
 
   onFacebookCard() {
     window.open('https://www.facebook.com/people/Perfect-catch/61556479269688', '_blank');
